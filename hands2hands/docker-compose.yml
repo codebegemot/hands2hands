@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: h2hUser
+      POSTGRES_PASSWORD: 123qwe123
+      POSTGRES_DB: hands2handsDb
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  api:
+    build: .
+    depends_on:
+      - db
+    environment:
+      ConnectionStrings__DefaultConnection: |
+        Host=db;Port=5432;Database=hands2handsDb;Username=h2hUser;Password=123qwe123
+    ports:
+      - "5001:8080"
+    command: >
+      /bin/bash -c "
+        dotnet ef database update &&
+        dotnet hands2hands.dll
+      "
+
+volumes:
+  pgdata:
