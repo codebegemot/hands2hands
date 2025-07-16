@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("hands2hands")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd5d89fec38cc0b158f5b1d61c525e223271253e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+225fbd6381516210df1ca388ca4b5239fe442888")]
 [assembly: System.Reflection.AssemblyProductAttribute("hands2hands")]
 [assembly: System.Reflection.AssemblyTitleAttribute("hands2hands")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
